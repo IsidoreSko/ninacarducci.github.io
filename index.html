@@ -7,12 +7,15 @@
     <!-- Ajout d'un titre:  -->
     <title>
       Photographe de concerts, mariages, entreprises, portraits - Nina Carducci
+      - Bordeaux
     </title>
     <!-- Ajout d'une balise <meta> pour la description:-->
     <meta
       name="description"
       content="La photographe Nina Carducci couvre des événemnts comme les mariages, les concerts et réalise aussi des portraits ou des photos d'entreprise."
     />
+    <!-- Lien pour le préchargement: -->
+    <!-- <link rel="preload" as="style" href="assets/style.css" /> -->
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,6 +32,68 @@
     ></script>
     <script src="./assets/maugallery.js"></script>
     <script src="./assets/scripts.js"></script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://isidoresko.github.io/ninacarducci.github.io/"
+    />
+    <meta property="og:title" content="Nina Carducci" />
+    <meta
+      property="og:description"
+      content="Nina Carducci photographe professionnel à Bordeaux"
+    />
+    <meta
+      property="og:image"
+      content="https://isidoresko.github.io/ninacarducci.github.io/assets/images/picture-nina-carducci.webp"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://isidoresko.github.io/ninacarducci.github.io/"
+    />
+    <meta property="twitter:title" content="Nina Carducci" />
+    <meta
+      property="twitter:description"
+      content="Nina Carducci photographe professionnel à Bordeaux"
+    />
+    <meta
+      property="twitter:image"
+      content="https://isidoresko.github.io/ninacarducci.github.io/assets/images/picture-nina-carducci.webp"
+    />
+
+    <!-- Ajoutez la structure JSON-LD pour les données structurées -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Nina Carducci",
+        "image": "https://isidoresko.github.io/ninacarducci.github.io/assets/images/picture-nina-carducci.webp",
+        "telephone": "05 56 67 78 89",
+        "email": "contact@ninacarducci.fr",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "68 avenue Alsace-Lorraine",
+          "addressLocality": "Bordeaux",
+          "addressCountry": "France",
+          "postalCode": "33200"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": {
+            "@type": "DayOfWeek",
+            "name": "Monday Tuesday Wednesday Thursday Friday"
+          },
+          "opens": "10:00",
+          "closes": "19:00"
+        },
+        "url": "https://isidoresko.github.io/ninacarducci.github.io/"
+      }
+    </script>
   </head>
   <body>
     <!-- Remplacer la <div> par la balise <header> -->
@@ -42,7 +107,10 @@
           <li><a href="#services">Service</a></li>
           <li><a href="#contact">Contact</a></li>
           <li>
+            <!-- Ajout des attributs "aria-label" et "rel" au lien:-->
             <a
+              rel="noopener"
+              aria-label="Lien vers le compte instagram de Nina Carducci"
               class="social-link"
               href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
               target="_blank"
@@ -95,7 +163,7 @@
         <div class="carousel-item">
           <!-- Renseigner le "alt": -->
           <img
-            src="./assets/images/slider/concert.-nicholas-greenwebp"
+            src="./assets/images/slider/concert-nicholas-green.webp"
             class="d-block w-100"
             alt="Personnes enthousiastes au milieu d'un publique debout."
           />
@@ -103,7 +171,7 @@
         <div class="carousel-item">
           <!-- Renseigner le "alt": -->
           <img
-            src="./assets/images/slider/wedding.-edward-cisneroswebp"
+            src="./assets/images/slider/wedding-edward-cisneros.webp"
             class="d-block w-100"
             alt=" Couple de mariés s'embrassant devant des convives qui applaudissent."
           />
@@ -129,7 +197,8 @@
       </button>
     </div>
     <!-- </div> -->
-    <div id="about">
+    <!-- Remplacement de la balise <div> par la balise <section> -->
+    <section id="about">
       <div class="picture left">
         <!-- Ajout de l'attribut "alt" -->
         <img
@@ -138,12 +207,14 @@
         />
       </div>
       <div id="about-me">
-        <h3 class="about-me__title">A propos de moi</h3>
-        <h6 class="about-me__introduction">
+        <!-- Remplacement de la balise <h3> en <h2> -->
+        <h2 class="about-me__title">A propos de moi</h2>
+        <!-- Remplacement de la balise <h6> en balise <p> -->
+        <p class="about-me__introduction">
           Devenir photographe était pour moi une évidence. Comme si j’y étais
           prédestiné. Saisir un moment, une émotion, une situation, un endroit,
           une lumière et les rendre immortels, voilà ce qui me fait vibrer.
-        </h6>
+        </p>
         <p>
           Nous passons notre vie à chercher le bonheur, et lorsque nous y
           touchons, nous n’avons qu’une envie : le figer au travers de
@@ -155,11 +226,13 @@
           lumière à chaque fois que vous poserez les yeux sur vos photos.
         </p>
       </div>
-    </div>
-    <div id="gallery">
+    </section>
+    <!-- Remplacement de la balise <div> en <section> -->
+    <section id="gallery">
       <h3 class="title">Portfolio</h3>
       <div class="container py-3">
-        <div class="gallery" style="display: none">
+        <!-- Supression de l'attribut style ; le css mis dans le fichier css -->
+        <div class="gallery">
           <!-- Ajout de l'attribut "alt" sur chaque photo de la galerie:-->
           <img
             data-gallery-tag="Concert"
@@ -217,22 +290,27 @@
           />
         </div>
       </div>
-      <div class="quote">
-        <figure>
-          <blockquote>
-            <h1 class="quote__text">
-              Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou
-              qu’un fait est traduit en photo, il cesse d’être un fait pour
-              devenir une opinion. L’inexactitude n’existe pas en photographie.
-              Toutes les photos sont exactes. Aucune d’elles n’est la vérité.
-            </h1>
-          </blockquote>
-          <figcaption class="quote__author">- Richard Avedon</figcaption>
-        </figure>
-      </div>
-    </div>
-    <div id="services">
-      <h3 class="title">Mes services</h3>
+    </section>
+    <!-- Remplacement de la balise <div> en <section> -->
+    <section class="quote">
+      <figure>
+        <blockquote>
+          <!-- Remplacement de la balise <h1> en balise <p> -->
+          <p class="quote__text">
+            Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou
+            qu’un fait est traduit en photo, il cesse d’être un fait pour
+            devenir une opinion. L’inexactitude n’existe pas en photographie.
+            Toutes les photos sont exactes. Aucune d’elles n’est la vérité.
+          </p>
+        </blockquote>
+        <figcaption class="quote__author">- Richard Avedon</figcaption>
+      </figure>
+    </section>
+
+    <!-- Remplacement de la balise <div> en <section> -->
+    <section id="services">
+      <!-- Remplacement de la balise <h3> en <h2> -->
+      <h2 class="title">Mes services</h2>
       <div class="container">
         <div class="service">
           <div class="service__description">
@@ -244,7 +322,8 @@
             </p>
           </div>
           <div class="service__price">
-            <h4>350€/demi journée</h4>
+            <!-- Remplacement de la balise <h4> par la balise <span> -->
+            <p>350€/demi journée</p>
             <span>Matériel, déplacement inclus</span>
           </div>
         </div>
@@ -257,7 +336,8 @@
             </p>
           </div>
           <div class="service__price">
-            <h4>50€/photo</h4>
+            <!-- Remplacement de la balise <h4> par la balise <span> -->
+            <span>50€/photo</span>
             <span>2 AR par photo</span>
           </div>
         </div>
@@ -269,29 +349,34 @@
               partagés ensemble à travers un album photo personnalisé
             </p>
           </div>
-          <div class="service__price">
-            <h4>400€ album A4</h4>
-            <span>30 pages recto/verso</span>
-          </div>
+        </div>
+        <div class="service__price">
+          <!-- Remplacement de la balise <h4> par la balise <span> -->
+          <p>400€ album A4</p>
+          <span>30 pages recto/verso</span>
         </div>
       </div>
-    </div>
-    <div class="quote">
+    </section>
+    <!-- Remplacement de la balise <div> par la balise <section> -->
+    <section class="quote">
       <figure>
         <blockquote>
-          <h1 class="quote__text">
+          <!-- Remplacement de la balise <h1> par la balise <p> -->
+          <p class="quote__text">
             De manière inconsciente, je crois, je guette un regard, une
             expression, des traits ou une nostalgie capable de résumer ou plus
             exactement de révéler une vie
-          </h1>
+          </p>
         </blockquote>
         <figcaption class="quote__author">- Richard Avedon</figcaption>
       </figure>
-    </div>
-    <div id="contact">
+    </section>
+    <!-- Remplacement de la balise <div> par la balise <section> -->
+    <section id="contact">
       <div class="container">
         <div class="form-container">
-          <h3>Une question ? Une demande de devis ?</h3>
+          <!-- Remplacement de la balise <h3> par la balise <h2> -->
+          <h2>Une question ? Une demande de devis ?</h2>
           <p>
             N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures
           </p>
@@ -316,6 +401,6 @@
           <img src="./assets/images/camera.webp" alt="Appareil photo." />
         </div>
       </div>
-    </div>
+    </section>
   </body>
 </html>

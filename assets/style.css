@@ -39,6 +39,8 @@ body {
 }
 
 .social-link img {
+/* Ajout d'une height: */
+	height: 20px;
 	width: 20px;
 }
 
@@ -66,11 +68,21 @@ body {
 	margin: 0 20px;
 	z-index: 0;
 }
-
 .picture img {
 	width: 100%;
-
+	/* ajout d'une height: */
+	height: auto;
 }
+
+/* Ajout d'une hauteur à la photo "camera": */
+/* .right img{
+	height: 79.5%;
+} */
+/* Ajout d'une hauteur à la photo de Nina: */
+/* .left img{
+	height: 99%;
+} */
+
 #about-me {
 	flex: 2
 }
@@ -90,9 +102,15 @@ body {
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
+/* Report du style qui se trouvé dans le HTML */
+.gallery {
+	display: none;
 }
+
+
+/* #gallery {
+	/*	min-height: 100vh; */
+/* } */ */
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -101,8 +119,10 @@ body {
 	justify-content: center;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
-	background-color: #BEB45A;
+	/* color: #fff; */
+	color: white;
+	/* Augmentation du contraste entre le texte et le background en fonçant la couleur */
+	background-color: #857605;
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
@@ -354,3 +374,6 @@ input[type="submit"] {
 	}
 }
 
+/* .carousel-inner {
+	height: 100%;
+} */
