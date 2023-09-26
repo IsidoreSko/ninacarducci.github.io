@@ -12,11 +12,10 @@
     <!-- Ajout d'une balise <meta> pour la description:-->
     <meta
       name="description"
-      content="La photographe Nina Carducci couvre des événemnts comme les mariages, les concerts et réalise aussi des portraits ou des photos d'entreprise."
+      content="La photographe professionnel Carducci couvre des événemnts comme les mariages, les concerts et réalise aussi des portraits ou des photos d'entreprise."
     />
-    <!-- Lien pour le préchargement: -->
-    <!-- <link rel="preload" as="style" href="assets/style.css" /> -->
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
+
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,16 +23,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
       rel="stylesheet"
     />
-    <script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/maugallery.js"></script>
-    <script src="./assets/scripts.js"></script>
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph data / Facebook Linkedin -->
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
@@ -49,7 +40,7 @@
       content="https://isidoresko.github.io/ninacarducci.github.io/assets/images/picture-nina-carducci.webp"
     />
 
-    <!-- Twitter -->
+    <!-- Twitter Card data -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta
       property="twitter:url"
@@ -65,7 +56,7 @@
       content="https://isidoresko.github.io/ninacarducci.github.io/assets/images/picture-nina-carducci.webp"
     />
 
-    <!-- Ajoutez la structure JSON-LD pour les données structurées -->
+    <!-- Ajout de la structure JSON-LD pour les données structurées; référencement local -->
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -73,8 +64,6 @@
         "name": "Nina Carducci",
         "image": "https://isidoresko.github.io/ninacarducci.github.io/assets/images/picture-nina-carducci.webp",
         "telephone": "05 56 67 78 89",
-        "email": "contact@ninacarducci.fr",
-        "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "68 avenue Alsace-Lorraine",
@@ -94,7 +83,19 @@
         "url": "https://isidoresko.github.io/ninacarducci.github.io/"
       }
     </script>
+
+    <!-- Ajout de "defer" sur le fichiers javScript: -->
+    <script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="./assets/maugallery.js" defer></script>
+    <script src="./assets/scripts.js" defer></script>
   </head>
+
   <body>
     <!-- Remplacer la <div> par la balise <header> -->
     <header class="top-header">
@@ -291,8 +292,8 @@
         </div>
       </div>
     </section>
-    <!-- Remplacement de la balise <div> en <section> -->
-    <section class="quote">
+
+    <div class="quote">
       <figure>
         <blockquote>
           <!-- Remplacement de la balise <h1> en balise <p> -->
@@ -305,7 +306,7 @@
         </blockquote>
         <figcaption class="quote__author">- Richard Avedon</figcaption>
       </figure>
-    </section>
+    </div>
 
     <!-- Remplacement de la balise <div> en <section> -->
     <section id="services">
@@ -357,8 +358,8 @@
         </div>
       </div>
     </section>
-    <!-- Remplacement de la balise <div> par la balise <section> -->
-    <section class="quote">
+
+    <div class="quote">
       <figure>
         <blockquote>
           <!-- Remplacement de la balise <h1> par la balise <p> -->
@@ -370,7 +371,7 @@
         </blockquote>
         <figcaption class="quote__author">- Richard Avedon</figcaption>
       </figure>
-    </section>
+    </div>
     <!-- Remplacement de la balise <div> par la balise <section> -->
     <section id="contact">
       <div class="container">
@@ -380,7 +381,7 @@
           <p>
             N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures
           </p>
-          <form action="" method="post">
+          <form action="#" method="post">
             <!-- Ajout des attributs "for" aux "label": -->
             <label for="nom">Nom</label>
             <input type="text" name="nom" id="nom" />
