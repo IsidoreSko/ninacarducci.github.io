@@ -15,14 +15,25 @@
       content="La photographe professionnel Carducci couvre des événemnts comme les mariages, les concerts et réalise aussi des portraits ou des photos d'entreprise."
     />
 
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+    </noscript>
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" as="style" onload="this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap">
+</noscript>
+
+
+    <!-- <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
       rel="stylesheet"
-    />
+    /> -->
    
     <!-- Open Graph data / Facebook Linkedin -->
     <meta property="og:type" content="website" />
